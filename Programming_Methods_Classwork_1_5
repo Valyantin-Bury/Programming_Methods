@@ -1,0 +1,34 @@
+#include <iostream>   
+   
+using namespace std;   
+   
+   
+int main()   
+{   
+    std::setlocale(LC_ALL, "russian");   
+    float M;   
+    char tipe;   
+    std::cout << "Введите кол-во часов, тип авто ('M'-мотоцикл,'C'-машина,'T'-грузовик)" << '\n';   
+    std::cin >> M >> tipe;   
+    if (M > 5)   
+        M = M * 1.15;  
+    switch (tipe) {   
+        case ('M'): {   
+            std::cout << "Цена за стоянку: "<< M * 20 << '\n';  
+            break;  
+        }   
+        case ('C'): {   
+            std::cout << "Цена за стоянку: " << M * 50 << '\n';  
+            break;  
+        }
+        case ('T'): {   
+            std::cout << "Цена за стоянку: " << M * 100 << '\n';  
+            break;  
+        }   
+        default:   
+            std::cout << "Неверные значения" << '\n';  
+            break;  
+        }   
+    
+    return 0; 
+}
