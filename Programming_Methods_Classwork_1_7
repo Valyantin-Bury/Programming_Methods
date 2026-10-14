@@ -1,0 +1,27 @@
+#include <iostream>   
+   
+using namespace std;   
+   
+   
+int main()   
+{   
+    std::setlocale(LC_ALL, "russian"); 
+  
+    int a, b; 
+  
+    std::cout << "Введите 2 числа a и b" << '\n'; 
+  
+    std::cin >> a >> b; 
+  
+    if (b % 2 != 0) 
+        b--;
+  
+    while (a <= b) { 
+        std::cout << b << " ";
+        b = b - 2;
+    } 
+    
+    return 0; 
+}
+
+  
