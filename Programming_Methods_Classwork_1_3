@@ -1,0 +1,31 @@
+#include <iostream>   
+   
+using namespace std;   
+   
+   
+int main()   
+{   
+    std::setlocale(LC_ALL, "russian");  
+    float a, b, c;  
+    std::cout << "Введите 'circle' или 'square' или 'triangle'" << '\n';  
+    string fig;  
+    std::cin >> fig;  
+   
+    if (fig == "circle") {  
+        std::cout << "Введите радиус" << '\n'; 
+        std::cin >> a; 
+        std::cout << "Периметр фируы = " << a*3.14*2 << '\n'; 
+    }  
+    if (fig == "square") {  
+        std::cout << "Введите сторону" << '\n'; 
+        std::cin >> a; 
+        std::cout << "Периметр фируы = " << a*4 << '\n'; 
+   
+    }  
+    if (fig == "triangle") {  
+        std::cout << "Введите стороны" << '\n'; 
+        std::cin >> a >> b >> c; 
+        std::cout << "Периметр фируы = " << a+b+c << '\n'; 
+    }
+    return 0; 
+}
