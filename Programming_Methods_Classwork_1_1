@@ -1,0 +1,20 @@
+#include <iostream>   
+   
+using namespace std;   
+   
+   
+int main()   
+{   
+    std::setlocale(LC_ALL, "russian");  
+    float x, y;  
+    
+    std::cout << "Введите координаты x,y" << '\n';  
+    std::cin >> x >> y;  
+    
+    if ((x >= -1 && x <= 1) && (y >= -1 && y <= 1) && (abs(x)+abs(y)==1))  
+        std::cout << "Лежат" << '\n';
+    else   
+        std::cout << "Не Лежат" << '\n'; 
+
+ return 0; 
+}
