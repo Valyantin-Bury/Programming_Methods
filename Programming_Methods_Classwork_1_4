@@ -1,0 +1,57 @@
+#include <iostream>   
+   
+using namespace std;   
+   
+   
+int main()   
+{   
+    std::setlocale(LC_ALL, "russian");   
+    int a, b, c;   
+    std::cout << "Введите день, месяц, год" << '\n';   
+    std::cin >> a >> b >> c;   
+    switch (b) {   
+    case (3):   
+    case (5):   
+    case (7):   
+    case (8):   
+    case (10):   
+    case (12):   
+    case (1): {   
+        if ((a < 32) && (a > 0))  
+            std::cout << "Верная дата" << '\n'; 
+        else  
+            std::cout << "Неправильная дата" << '\n'; 
+        break;  
+    }   
+    case (6):   
+    case (9):   
+    case (11):   
+    case (4): {   
+        if ((a < 31) && (a > 0))  
+            std::cout << "Верная дата" << '\n'; 
+        else  
+            std::cout << "Неправильная дата" << '\n'; 
+        break;  
+    }   
+    
+    case (2): {   
+        if (((c%4==0 && c%100!=0) || c%400==0))  
+            if (((a < 30) && (a > 0))) 
+                std::cout << "Верная дата" << '\n';
+            else  
+                std::cout << "Неправильная дата " << '\n';
+    
+        else  
+            if (((a < 29) && (a > 0))) 
+                std::cout << "Верная дата" << '\n';
+            else 
+                std::cout << "Неправильная дата " << '\n';
+        break;  
+    }   
+    
+    default:   
+        std::cout << "Неправильная дата" << '\n';  
+        break;  
+    }   
+    return 0; 
+}
