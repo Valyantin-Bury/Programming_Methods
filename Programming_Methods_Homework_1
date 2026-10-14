@@ -1,0 +1,38 @@
+#include <iostream>
+
+int main()
+{
+    int y,x;
+    std::cout<<"Enter the coordinats"<<'\n';
+    std::cin>>y>>x;
+    char c;
+    
+    if (y>=(-x+6))
+        c = 'd';
+    
+    else if (y<=(-x+2))
+        c = 'p';
+    
+    else
+        c = 'f';
+        
+    if (y<=4 && x<=4 && x>=0 && y>=0)
+        switch (c){
+            case 'd':{
+                std::cout<<"Its desert";
+                break;
+            }
+            case 'p':{
+                std::cout<<"Its plane";
+                break;
+                
+            }
+            case 'f':{
+                std::cout<<"Its forest";
+                break;
+            }
+    }
+    else
+        std::cout<<"Неверные координаты";
+    return 0;
+}
