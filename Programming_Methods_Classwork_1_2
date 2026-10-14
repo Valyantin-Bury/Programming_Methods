@@ -1,0 +1,17 @@
+#include <iostream>   
+   
+using namespace std;   
+   
+   
+int main()   
+{   
+    std::setlocale(LC_ALL, "russian");  
+    int x;  
+    std::cout << "Введите число" << '\n';  
+    std::cin >> x ;  
+    if ((x % 3 ==0) && (x % 5 == 0) && ( x % 10!=0))  
+        std::cout << "Данное число делиться на 3 и 5, но не делиться на 10" << '\n'; 
+    else  
+        std::cout << "Попробуйте такое число, чтобы оно делилось на 3 и 5, но не делилось на 10" << '\n'; 
+    return 0; 
+}
