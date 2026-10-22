@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int i, j;
+    char a, b;
+    
+    std::cout << "Enter the first square's coordinates" << "\n";
+    std::cin >> a >> i;
+
+    std::cout << "Enter the second square's coordinates" << "\n";
+    std::cin >> b >> j;
+    
+    if ((i + a) % 2 == (j + b) % 2) {
+        std::cout << "These squares are of the same color" << "\n";
+    } else {
+        std::cout << "These squares are not of the same color" << "\n";
+    }
+    
+    return 0;
+}
+// Checking if two chessboard squares are the same color
