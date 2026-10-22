@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+    std::setlocale(LC_ALL, "russian");
+    int n, i{ 0 }, j{ 0 };
+
+    std::cout << "Введите число n" << '\n' << '\n';
+    std::cin >> n;
+    
+    for (i = 1; i <= n; i++) {
+        std::cout << '\n';
+        for (j = 1; j <= n; j++) {
+            std::cout << i * j << ' ';
+        }
+    }
+    std::cout << '\n';
+
+    return 0;
+}
+// n × n Multiplication table
