@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+    std::setlocale(LC_ALL, "russian");
+    int n, i{ 2 }, j{ 0 };
+
+    std::cout << "Введите число n" << '\n';
+    std::cin >> n;
+    
+    while (i < n) {
+        if (n % i == 0) {
+            j = 1;
+            break;
+        }
+        i++;
+    }
+    
+    if (j == 1) {
+        std::cout << "Не простое" << '\n';
+    } else {
+        std::cout << "Простое" << '\n';
+    }
+
+    return 0;
+}
+// primality test
