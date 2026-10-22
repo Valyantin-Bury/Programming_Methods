@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+    std::setlocale(LC_ALL, "russian");
+    long long a, b{ 0 }, i{ 0 };
+
+    std::cout << "Введите число А" << '\n';
+    std::cin >> a;
+    
+    while (a > i) {
+        if (a % 10 > b) {
+            b = a % 10;
+        }
+        
+        if (b == 9) {
+            break;
+        }
+        
+        a = a / 10;
+    }
+    
+    std::cout << "Максимальная цифра в числе: " << b << '\n';
+
+    return 0;
+}
+// finding the maximum digit in a number
