@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+    std::setlocale(LC_ALL, "russian");
+    long long a, b{ 0 }, i{ 0 };
+
+    std::cout << "Введите число А" << '\n';
+    std::cin >> a;
+    
+    while (a != 1) {
+        std::cout << a << ' ';
+        
+        if (a % 2 == 0) {
+            a = a / 2;
+        } else if (a % 2 != 0) {
+            a = a * 3 + 1;
+        }
+        
+        std::cout << "-" << ' ';
+        
+        if (a == 1) {
+            std::cout << "1" << '\n';
+        }
+        
+        i++;
+    }
+
+    return 0;
+}
+// Collatz trajectory
