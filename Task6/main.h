@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-void foo(float& a)
+
+void foo(double& a, int& b)
 {
- float b = 0;
- b = a % 1;
+ b = a;
  a = a - b;
 }
