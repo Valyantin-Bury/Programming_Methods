@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+float left_dir{ 0 }, right_dir{ 0 }, urn{ 0 };
+
+float& changeX()
+{
+    char a;
+    std::cin >> a;
+
+    switch (a) {
+    case 'L': {
+        return left_dir;
+        break;
+    }
+    case 'R': {
+        return right_dir;
+        break;
+    }
+    default: {
+        return urn;
+        break;
+    }
+    }
+}
+
+int main()
+{
+    std::setlocale(LC_ALL, "russian");
+    std::cout << left_dir << " " << right_dir << "\n";
+    changeX() = 3;
+    std::cout << left_dir << " " << right_dir << "\n";
+    
+    return 0;
+}
