@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+float total{ 0.0 };
+
+float& add(float& total, float a)
+{
+    total = total + a;
+    return total;
+}
+
+int main()
+{
+    std::setlocale(LC_ALL, "russian");
+    std::cout << add(add(add(total, 5.5), 1.2), 3.3) << "\n";
+
+    return 0;
+}
