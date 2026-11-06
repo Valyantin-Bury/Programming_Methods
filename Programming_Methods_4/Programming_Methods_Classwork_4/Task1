@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+// Задача 1
+void foo(int a)
+{
+    std::cout << "int\n";
+}
+
+void foo(float a)
+{
+    std::cout << "float\n";
+}
+
+void foo(bool a)
+{
+    std::cout << "bool\n";
+}
+
+int main()
+{
+    //bool a{true};
+    //float a{1.0f};
+    int a{1};
+    
+    // Вызов функции для логического типа
+    foo(a); 
+    
+    return 0;
+}
