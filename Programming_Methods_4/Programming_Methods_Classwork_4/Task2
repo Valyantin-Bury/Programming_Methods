@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+void RectArea(const int& a, const int& b)
+{
+    // a++; // Ошибка: нельзя изменять const int&
+    // Надо поменять в функции значение одного из параметров
+    std::cout << a * b << "\n";
+}
+
+void RectArea(const double& a, const double& b)
+{
+    std::cout << a * b << "\n";
+}
+
+int main()
+{
+    // int a, b;
+    double a, b;
+    std::cout << "Введите стороны прямоугольника a,b\n";
+    std::cin >> a >> b;
+    RectArea(a, b);
+
+    return 0;
+
+}
+
