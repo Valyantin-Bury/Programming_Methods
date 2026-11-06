@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+double foo(const double& x)
+{
+    double y = 1 / x;
+    return y;
+}
+
+void Rect(double x, const double& e, const double& d)
+{
+    if (foo(x - e) - foo(x + e) < 0) {
+        if (foo(x - e) - foo(x + e) < -d)
+            std::cout << "Есть предел в этой точке" << "\n";
+        else
+            std::cout << "Нету предела в этой точке" << "\n";
+    }
+    else {
+        if (foo(x - e) - foo(x + e) < d)
+            std::cout << "Есть предел в этой точке" << "\n";
+        else
+            std::cout << "Нету предела в этой точке" << "\n";
+    }
+}
+
+int main()
+{
+    std::setlocale(LC_ALL, "russian");
+    double x, e{ 0.001 }, d{ 0.0001 };
+    std::cout << "Введите Xo\n";
+    std::cin >> x;
+    Rect(x, e, d);
+    
+    return 0;
+    
+}
