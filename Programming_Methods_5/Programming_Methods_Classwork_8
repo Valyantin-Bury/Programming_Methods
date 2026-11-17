@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+
+const int SIZE{ 101 };
+
+int Step(int x, int i)
+{
+    if (i == 0)
+        return 1;
+    int per{ 1 };
+    for (int j{ 0 }; j < i; j++) {
+        per = per * x;
+    }
+    return per;
+}
+
+int main()
+{
+    std::setlocale(LC_ALL, "russian");
+    std::cout << "Максимальный размер массива 100" << '\n';
+    int mus[SIZE]{ 0 };
+    int n;
+    int x;
+    int sum{ 0 };
+    std::cin >> n;
+    for (int i{ 0 }; i < n; i++) {
+        //Задаём коэфиценты
+        std::cin >> mus[i];
+    }
+    std::cout << "Введите значение x" << '\n';
+    std::cin >> x;
+
+    for (int i{ 0 }; i < n; i++) {
+        sum += mus[i] * Step(x, i);
+        std::cout << "Значение sum: " << sum << " Значение a: " << mus[i] << " Значение n: " << i << " Значение числа: " << mus[i] * Step(x, i) << '\n';
+    }
+    std::cout << sum << ' ';
+    return 0;
+}
