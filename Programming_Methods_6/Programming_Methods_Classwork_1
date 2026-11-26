@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int const n = 5, k = 2, res = n - k + 1;
+
+    int matrix[n][n] = {
+        {1,2,3,4,5},
+        {6,7,8,9,1},
+        {2,3,4,5,6},
+        {7,8,9,1,2},
+        {3,4,5,6,7}
+    };
+
+    int kernel[k][k] = {
+        {-1,1},
+        {-1,1}
+    };
+
+    int result[res][res]{ 0 };
+
+    for (int i{ 0 }; i < res; ++i) {
+        for (int j{ 0 }; j < res; ++j) {
+            for (int ki{ 0 }; ki < k; ++ki) {
+                for (int kj{ 0 }; kj < k; ++kj) {
+                    result[i][j] += matrix[i + ki][j + kj] * kernel[ki][kj];
+                }
+            }
+            cout << result[i][j] << " ";
+        }
+        cout <<"\n";
+    }
+ 
+    return 0;
+}
